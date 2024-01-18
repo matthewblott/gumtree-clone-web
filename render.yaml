@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: piazza-web
+    name: gumtree-clone-web
     env: ruby
     plan: free
     numInstances: 1
@@ -9,12 +9,12 @@ services:
     # envVars:
     #   - key: DATABASE_URL
     #     fromDatabase:
-    #       name: piazza-db
+    #       name: gumtree-clone-db
     #       property: connectionString
     #   - key: RAILS_MASTER_KEY
     #     sync: false
           
 # databases:
-#   - name: piazza-db
+#   - name: gumtree-clone-db
 #     plan: free
 #     postgresMajorVersion: 14
