@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_19_181156) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_20_212112) do
+  create_table "app_sessions", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "token_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_app_sessions_on_user_id"
+  end
+
   create_table "memberships", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "organization_id", null: false
@@ -34,6 +42,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_19_181156) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "app_sessions", "users"
   add_foreign_key "memberships", "organizations"
   add_foreign_key "memberships", "users"
 end
