@@ -1,0 +1,8 @@
+AllCops:
+  RunRailsCops: true
+  Excludes:
+    - './config/initializers/form_errors.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
