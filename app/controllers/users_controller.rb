@@ -5,8 +5,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+
     if @user.save
-      # TODO: Log in user...
+      @app_session = @user.app_sessions.create
+      log_in(@app_session)
+
       @organization = Organization.create(members: [@user])
       redirect_to(
         root_path,
