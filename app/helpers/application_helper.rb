@@ -1,8 +1,8 @@
 module ApplicationHelper
 
   def title
-    return t("gumtree-clone") unless content_for?(:title)
-    "#{content_for(:title)} | #{t("gumtree-clone")}"
+    return t("mumtree") unless content_for?(:title)
+    "#{content_for(:title)} | #{t("mumtree")}"
   end
 
 end

@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: gumtree-clone-web
+    name: mumtree-web
     env: ruby
     plan: free
     numInstances: 1
