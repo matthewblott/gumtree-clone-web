@@ -1,8 +1,8 @@
 en:
   users:
     new:
-      title: Sign up for Piazza
+      title: Sign up for Mumtree
       sign_up: Sign up!
     create:
-      welcome: "Welcome to Gumtree Clone, %{name}"
+      welcome: "Welcome to Mumtree, %{name}"
 

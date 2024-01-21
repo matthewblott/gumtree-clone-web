@@ -26,6 +26,10 @@ module Authenticate
     }
   end
 
+  def log_out 
+    Current.app_session&.destroy
+  end
+
   def logged_in? 
     Current.user.present?
   end
