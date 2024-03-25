@@ -10,7 +10,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "cssbundling-rails"
 gem "jbuilder"
-
+gem "rdoc", ">= 6.6.3.1"
 gem "redis", ">= 4.0.1"
 # gem "kredis"
 
